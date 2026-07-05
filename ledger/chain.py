@@ -8,9 +8,9 @@ head. The site serves chain.json verbatim; anyone can re-run verify().
 Recreated 2026-07-05: the original was authored in an ephemeral
 sandbox and never pushed. The GENESIS_HASH constant survives in the
 deployed site and its tests and is kept verbatim as the chain anchor.
-Its preimage is lost and irrelevant: integrity derives from the links,
-not from the anchor's provenance — the anchor is simply the agreed
-starting constant, published before any entry existed.
+The anchor is fully auditable: GENESIS_HASH == SHA-256 of the ASCII
+string "the-margin-genesis" — and in any case integrity derives from
+the links, not from the anchor's provenance.
 
 API (consumed by margin/bridge.py — do not change signatures):
   GENESIS_HASH: str

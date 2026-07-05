@@ -17,6 +17,8 @@ Verify the live ledger:
 
 History note: recreated 2026-07-05 after the original (authored in an
 ephemeral environment) was lost before ever publishing an entry. The
-genesis anchor is unchanged; no published chain ever existed under the
-old copy, so there is nothing to migrate and nothing that could have
-been rewritten.
+genesis anchor is unchanged and fully auditable: it is
+SHA-256("the-margin-genesis") — verify with
+`python3 -c "import hashlib; print(hashlib.sha256(b'the-margin-genesis').hexdigest())"`.
+No published chain ever existed under the old copy, so there is
+nothing to migrate and nothing that could have been rewritten.
